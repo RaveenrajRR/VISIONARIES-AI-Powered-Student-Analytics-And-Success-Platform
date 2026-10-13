@@ -40,7 +40,7 @@ function skillSource(student: any) {
 function observedSkills(student: any): string[] {
                 const source = skillSource(student);
                 const verified = [...asList(source.verifiedSkills), ...asList(source.skills).filter(item => item && typeof item === 'object' && item.verified === true)];
-                return [...new Set(verified.map(item => typeof item === 'string' ? item : item?.skill || item?.name).filter((name): name is string => typeof name === 'string' && name.trim()).map(name => name.trim()))];
+                return [...new Set(verified.map(item => typeof item === 'string' ? item : item?.skill || item?.name).filter((name): name is string => typeof name === 'string' && name.trim().length > 0).map(name => name.trim()))];
 }
 
 async function evidenceFor(student: any) {
