@@ -1,0 +1,48 @@
+import express,{NextFunction,Request,Response} from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import morgan from 'morgan';
+import {auth,allow} from './middleware/auth';
+import {asyncRoute} from './middleware/asyncRoute';
+import * as c from './controllers/api';
+import * as ai from './controllers/ai';
+import {featureRouter} from './routes/features';
+import {AIServiceError} from './services/aiClient';
+
+export const app=express();
+app.use(helmet());
+app.use(cors({origin:(process.env.FRONTEND_ORIGIN||'http://localhost:5173').split(','),credentials:false}));
+app.use(express.json({limit:'5mb'}));
+app.use(morgan('tiny'));
+app.use(rateLimit({windowMs:15*60*1000,limit:300,standardHeaders:true,legacyHeaders:false}));
+
+app.get('/api/health',(_req,res)=>res.json({status:'ok',service:'eduai-backend',database:'connection status exposed through startup logs'}));
+app.post('/api/auth/login',asyncRoute(c.login));
+app.post('/api/auth/logout',auth,(_req,res)=>res.json({ok:true,note:'JWT is stateless; client must discard token'}));
+app.get('/api/auth/me',auth,asyncRoute(c.me));
+app.get('/api/ai/health',auth,asyncRoute(ai.health));
+app.get('/api/dashboard/overview',auth,asyncRoute(c.overview));
+app.get('/api/students',auth,asyncRoute(c.listStudents));
+app.get('/api/students/:id',auth,asyncRoute(c.getStudent));
+app.get('/api/students/:id/:kind',auth,asyncRoute(c.analytics));
+app.get('/api/interventions',auth,asyncRoute(c.listInterventions));
+app.post('/api/interventions',auth,allow('admin','faculty'),asyncRoute(c.createIntervention));
+app.patch('/api/interventions/:id',auth,allow('admin','faculty'),asyncRoute(c.updateIntervention));
+app.post('/api/imports/preview',auth,allow('admin'),asyncRoute(c.previewImport));
+app.post('/api/imports/commit',auth,allow('admin'),asyncRoute(c.commitImport));
+app.get('/api/imports/:id/report',auth,allow('admin'),asyncRoute(c.importReport));
+app.get('/api/reports/export',auth,asyncRoute(c.exportStudents));
+app.get('/api/audit-logs',auth,allow('admin'),asyncRoute(c.auditLogs));
+app.get('/api/analytics/trends',auth,(_req,res)=>res.json({items:[],note:'Trend aggregation is available after importing source data; no fabricated values.'}));
+app.get('/api/analytics/segments',auth,allow('admin','faculty'),asyncRoute(ai.segments));
+app.get('/api/analytics/risk-summary',auth,allow('admin','faculty'),asyncRoute(ai.riskSummary));
+app.get('/api/analytics/placement-summary',auth,allow('admin','faculty'),asyncRoute(ai.placementSummary));
+app.use('/api/features', featureRouter);
+app.use((err:unknown,_req:Request,res:Response,_next:NextFunction)=>{
+  const isAIError=err instanceof AIServiceError;
+  const status=isAIError?err.statusCode:500;
+  const message=isAIError?err.message:'Internal server error';
+  console.error(JSON.stringify({level:'error',message:err instanceof Error?err.message:'Unknown error'}));
+  res.status(status).json({error:message});
+});

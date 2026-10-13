@@ -1,0 +1,2 @@
+# Dataset validation report
+Generated at packaging time. Student rows: 600. Source rows: 600 each for academic, attendance, LMS, engagement, placement, skills and feedback. All foreign keys refer to an existing student ID. Student IDs are unique in each primary CSV. Missing values are intentionally present in attendance and aptitude fields. Every row is synthetic. Duplicate-row fixtures are intentionally not mixed into production import CSVs; duplicate behavior should be tested by importing the same files twice.

@@ -1,0 +1,12 @@
+{
+                "name": "eduai-nexus",
+                "private": true,
+                "version": "1.0.0",
+                "scripts": {
+                                "dev:frontend": "npm --prefix frontend run dev",
+                                "dev:backend": "npm --prefix backend run dev",
+                                "build": "npm --prefix frontend run build && npm --prefix backend run build",
+                                "test:backend": "npm --prefix backend test",
+                                "test:ai": "cd ai-service && python -m pytest"
+                }
+}

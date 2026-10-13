@@ -1,0 +1,601 @@
+student_id,synthetic,display_name,department,year,email,status
+S0001,true,Synthetic Student 0001,Civil,4,s0001@example.invalid,active
+S0002,true,Synthetic Student 0002,Information Technology,2,s0002@example.invalid,active
+S0003,true,Synthetic Student 0003,Information Technology,1,s0003@example.invalid,active
+S0004,true,Synthetic Student 0004,Computer Science,3,s0004@example.invalid,active
+S0005,true,Synthetic Student 0005,Civil,4,s0005@example.invalid,active
+S0006,true,Synthetic Student 0006,Civil,3,s0006@example.invalid,active
+S0007,true,Synthetic Student 0007,Information Technology,2,s0007@example.invalid,active
+S0008,true,Synthetic Student 0008,Electronics,2,s0008@example.invalid,active
+S0009,true,Synthetic Student 0009,Computer Science,4,s0009@example.invalid,active
+S0010,true,Synthetic Student 0010,Mechanical,3,s0010@example.invalid,active
+S0011,true,Synthetic Student 0011,Mechanical,3,s0011@example.invalid,active
+S0012,true,Synthetic Student 0012,Mechanical,3,s0012@example.invalid,active
+S0013,true,Synthetic Student 0013,Computer Science,4,s0013@example.invalid,active
+S0014,true,Synthetic Student 0014,Information Technology,4,s0014@example.invalid,active
+S0015,true,Synthetic Student 0015,Information Technology,1,s0015@example.invalid,active
+S0016,true,Synthetic Student 0016,Electronics,4,s0016@example.invalid,active
+S0017,true,Synthetic Student 0017,Information Technology,2,s0017@example.invalid,active
+S0018,true,Synthetic Student 0018,Electronics,4,s0018@example.invalid,active
+S0019,true,Synthetic Student 0019,Mechanical,4,s0019@example.invalid,active
+S0020,true,Synthetic Student 0020,Computer Science,4,s0020@example.invalid,active
+S0021,true,Synthetic Student 0021,Electronics,4,s0021@example.invalid,active
+S0022,true,Synthetic Student 0022,Electronics,3,s0022@example.invalid,active
+S0023,true,Synthetic Student 0023,Computer Science,3,s0023@example.invalid,active
+S0024,true,Synthetic Student 0024,Electronics,3,s0024@example.invalid,active
+S0025,true,Synthetic Student 0025,Civil,3,s0025@example.invalid,active
+S0026,true,Synthetic Student 0026,Mechanical,1,s0026@example.invalid,active
+S0027,true,Synthetic Student 0027,Information Technology,1,s0027@example.invalid,active
+S0028,true,Synthetic Student 0028,Civil,1,s0028@example.invalid,active
+S0029,true,Synthetic Student 0029,Civil,1,s0029@example.invalid,active
+S0030,true,Synthetic Student 0030,Electronics,3,s0030@example.invalid,active
+S0031,true,Synthetic Student 0031,Computer Science,2,s0031@example.invalid,active
+S0032,true,Synthetic Student 0032,Computer Science,3,s0032@example.invalid,active
+S0033,true,Synthetic Student 0033,Information Technology,2,s0033@example.invalid,active
+S0034,true,Synthetic Student 0034,Computer Science,2,s0034@example.invalid,active
+S0035,true,Synthetic Student 0035,Civil,2,s0035@example.invalid,active
+S0036,true,Synthetic Student 0036,Civil,3,s0036@example.invalid,active
+S0037,true,Synthetic Student 0037,Civil,2,s0037@example.invalid,active
+S0038,true,Synthetic Student 0038,Computer Science,2,s0038@example.invalid,active
+S0039,true,Synthetic Student 0039,Mechanical,4,s0039@example.invalid,active
+S0040,true,Synthetic Student 0040,Information Technology,3,s0040@example.invalid,active
+S0041,true,Synthetic Student 0041,Civil,4,s0041@example.invalid,active
+S0042,true,Synthetic Student 0042,Computer Science,3,s0042@example.invalid,active
+S0043,true,Synthetic Student 0043,Computer Science,1,s0043@example.invalid,active
+S0044,true,Synthetic Student 0044,Mechanical,4,s0044@example.invalid,active
+S0045,true,Synthetic Student 0045,Computer Science,2,s0045@example.invalid,active
+S0046,true,Synthetic Student 0046,Mechanical,4,s0046@example.invalid,active
+S0047,true,Synthetic Student 0047,Civil,4,s0047@example.invalid,active
+S0048,true,Synthetic Student 0048,Computer Science,3,s0048@example.invalid,active
+S0049,true,Synthetic Student 0049,Civil,4,s0049@example.invalid,active
+S0050,true,Synthetic Student 0050,Mechanical,4,s0050@example.invalid,active
+S0051,true,Synthetic Student 0051,Civil,1,s0051@example.invalid,active
+S0052,true,Synthetic Student 0052,Civil,4,s0052@example.invalid,active
+S0053,true,Synthetic Student 0053,Civil,3,s0053@example.invalid,active
+S0054,true,Synthetic Student 0054,Electronics,4,s0054@example.invalid,active
+S0055,true,Synthetic Student 0055,Civil,2,s0055@example.invalid,active
+S0056,true,Synthetic Student 0056,Civil,2,s0056@example.invalid,active
+S0057,true,Synthetic Student 0057,Computer Science,3,s0057@example.invalid,active
+S0058,true,Synthetic Student 0058,Mechanical,1,s0058@example.invalid,active
+S0059,true,Synthetic Student 0059,Civil,4,s0059@example.invalid,active
+S0060,true,Synthetic Student 0060,Electronics,2,s0060@example.invalid,active
+S0061,true,Synthetic Student 0061,Mechanical,2,s0061@example.invalid,active
+S0062,true,Synthetic Student 0062,Civil,4,s0062@example.invalid,active
+S0063,true,Synthetic Student 0063,Computer Science,3,s0063@example.invalid,active
+S0064,true,Synthetic Student 0064,Mechanical,4,s0064@example.invalid,active
+S0065,true,Synthetic Student 0065,Information Technology,1,s0065@example.invalid,active
+S0066,true,Synthetic Student 0066,Electronics,4,s0066@example.invalid,active
+S0067,true,Synthetic Student 0067,Civil,4,s0067@example.invalid,active
+S0068,true,Synthetic Student 0068,Electronics,3,s0068@example.invalid,active
+S0069,true,Synthetic Student 0069,Electronics,3,s0069@example.invalid,active
+S0070,true,Synthetic Student 0070,Civil,2,s0070@example.invalid,active
+S0071,true,Synthetic Student 0071,Civil,1,s0071@example.invalid,active
+S0072,true,Synthetic Student 0072,Information Technology,1,s0072@example.invalid,active
+S0073,true,Synthetic Student 0073,Civil,4,s0073@example.invalid,active
+S0074,true,Synthetic Student 0074,Computer Science,3,s0074@example.invalid,active
+S0075,true,Synthetic Student 0075,Civil,1,s0075@example.invalid,active
+S0076,true,Synthetic Student 0076,Information Technology,4,s0076@example.invalid,active
+S0077,true,Synthetic Student 0077,Civil,3,s0077@example.invalid,active
+S0078,true,Synthetic Student 0078,Computer Science,3,s0078@example.invalid,active
+S0079,true,Synthetic Student 0079,Civil,4,s0079@example.invalid,active
+S0080,true,Synthetic Student 0080,Civil,3,s0080@example.invalid,active
+S0081,true,Synthetic Student 0081,Mechanical,4,s0081@example.invalid,active
+S0082,true,Synthetic Student 0082,Information Technology,2,s0082@example.invalid,active
+S0083,true,Synthetic Student 0083,Civil,3,s0083@example.invalid,active
+S0084,true,Synthetic Student 0084,Civil,2,s0084@example.invalid,active
+S0085,true,Synthetic Student 0085,Electronics,4,s0085@example.invalid,active
+S0086,true,Synthetic Student 0086,Civil,4,s0086@example.invalid,active
+S0087,true,Synthetic Student 0087,Civil,2,s0087@example.invalid,active
+S0088,true,Synthetic Student 0088,Civil,4,s0088@example.invalid,active
+S0089,true,Synthetic Student 0089,Computer Science,4,s0089@example.invalid,active
+S0090,true,Synthetic Student 0090,Electronics,2,s0090@example.invalid,active
+S0091,true,Synthetic Student 0091,Civil,3,s0091@example.invalid,active
+S0092,true,Synthetic Student 0092,Information Technology,3,s0092@example.invalid,active
+S0093,true,Synthetic Student 0093,Civil,1,s0093@example.invalid,active
+S0094,true,Synthetic Student 0094,Electronics,3,s0094@example.invalid,active
+S0095,true,Synthetic Student 0095,Electronics,4,s0095@example.invalid,active
+S0096,true,Synthetic Student 0096,Computer Science,4,s0096@example.invalid,active
+S0097,true,Synthetic Student 0097,Mechanical,3,s0097@example.invalid,active
+S0098,true,Synthetic Student 0098,Computer Science,2,s0098@example.invalid,active
+S0099,true,Synthetic Student 0099,Computer Science,1,s0099@example.invalid,active
+S0100,true,Synthetic Student 0100,Civil,3,s0100@example.invalid,active
+S0101,true,Synthetic Student 0101,Civil,1,s0101@example.invalid,active
+S0102,true,Synthetic Student 0102,Electronics,2,s0102@example.invalid,active
+S0103,true,Synthetic Student 0103,Information Technology,2,s0103@example.invalid,active
+S0104,true,Synthetic Student 0104,Mechanical,1,s0104@example.invalid,active
+S0105,true,Synthetic Student 0105,Electronics,4,s0105@example.invalid,active
+S0106,true,Synthetic Student 0106,Electronics,3,s0106@example.invalid,active
+S0107,true,Synthetic Student 0107,Computer Science,2,s0107@example.invalid,active
+S0108,true,Synthetic Student 0108,Information Technology,3,s0108@example.invalid,active
+S0109,true,Synthetic Student 0109,Information Technology,3,s0109@example.invalid,active
+S0110,true,Synthetic Student 0110,Mechanical,4,s0110@example.invalid,active
+S0111,true,Synthetic Student 0111,Computer Science,1,s0111@example.invalid,active
+S0112,true,Synthetic Student 0112,Computer Science,1,s0112@example.invalid,active
+S0113,true,Synthetic Student 0113,Electronics,4,s0113@example.invalid,active
+S0114,true,Synthetic Student 0114,Electronics,1,s0114@example.invalid,active
+S0115,true,Synthetic Student 0115,Civil,3,s0115@example.invalid,active
+S0116,true,Synthetic Student 0116,Computer Science,4,s0116@example.invalid,active
+S0117,true,Synthetic Student 0117,Mechanical,3,s0117@example.invalid,active
+S0118,true,Synthetic Student 0118,Civil,1,s0118@example.invalid,active
+S0119,true,Synthetic Student 0119,Mechanical,3,s0119@example.invalid,active
+S0120,true,Synthetic Student 0120,Computer Science,4,s0120@example.invalid,active
+S0121,true,Synthetic Student 0121,Computer Science,3,s0121@example.invalid,active
+S0122,true,Synthetic Student 0122,Civil,3,s0122@example.invalid,active
+S0123,true,Synthetic Student 0123,Civil,1,s0123@example.invalid,active
+S0124,true,Synthetic Student 0124,Electronics,1,s0124@example.invalid,active
+S0125,true,Synthetic Student 0125,Civil,4,s0125@example.invalid,active
+S0126,true,Synthetic Student 0126,Electronics,3,s0126@example.invalid,active
+S0127,true,Synthetic Student 0127,Mechanical,2,s0127@example.invalid,active
+S0128,true,Synthetic Student 0128,Computer Science,1,s0128@example.invalid,active
+S0129,true,Synthetic Student 0129,Electronics,4,s0129@example.invalid,active
+S0130,true,Synthetic Student 0130,Mechanical,4,s0130@example.invalid,active
+S0131,true,Synthetic Student 0131,Computer Science,4,s0131@example.invalid,active
+S0132,true,Synthetic Student 0132,Mechanical,3,s0132@example.invalid,active
+S0133,true,Synthetic Student 0133,Civil,2,s0133@example.invalid,active
+S0134,true,Synthetic Student 0134,Civil,2,s0134@example.invalid,active
+S0135,true,Synthetic Student 0135,Electronics,3,s0135@example.invalid,active
+S0136,true,Synthetic Student 0136,Mechanical,2,s0136@example.invalid,active
+S0137,true,Synthetic Student 0137,Information Technology,3,s0137@example.invalid,active
+S0138,true,Synthetic Student 0138,Information Technology,3,s0138@example.invalid,active
+S0139,true,Synthetic Student 0139,Civil,1,s0139@example.invalid,active
+S0140,true,Synthetic Student 0140,Civil,3,s0140@example.invalid,active
+S0141,true,Synthetic Student 0141,Mechanical,2,s0141@example.invalid,active
+S0142,true,Synthetic Student 0142,Information Technology,1,s0142@example.invalid,active
+S0143,true,Synthetic Student 0143,Mechanical,4,s0143@example.invalid,active
+S0144,true,Synthetic Student 0144,Mechanical,3,s0144@example.invalid,active
+S0145,true,Synthetic Student 0145,Information Technology,2,s0145@example.invalid,active
+S0146,true,Synthetic Student 0146,Mechanical,1,s0146@example.invalid,active
+S0147,true,Synthetic Student 0147,Information Technology,2,s0147@example.invalid,active
+S0148,true,Synthetic Student 0148,Mechanical,2,s0148@example.invalid,active
+S0149,true,Synthetic Student 0149,Information Technology,4,s0149@example.invalid,active
+S0150,true,Synthetic Student 0150,Computer Science,2,s0150@example.invalid,active
+S0151,true,Synthetic Student 0151,Electronics,1,s0151@example.invalid,active
+S0152,true,Synthetic Student 0152,Information Technology,2,s0152@example.invalid,active
+S0153,true,Synthetic Student 0153,Mechanical,4,s0153@example.invalid,active
+S0154,true,Synthetic Student 0154,Computer Science,4,s0154@example.invalid,active
+S0155,true,Synthetic Student 0155,Computer Science,2,s0155@example.invalid,active
+S0156,true,Synthetic Student 0156,Electronics,4,s0156@example.invalid,active
+S0157,true,Synthetic Student 0157,Computer Science,1,s0157@example.invalid,active
+S0158,true,Synthetic Student 0158,Electronics,4,s0158@example.invalid,active
+S0159,true,Synthetic Student 0159,Electronics,2,s0159@example.invalid,active
+S0160,true,Synthetic Student 0160,Mechanical,1,s0160@example.invalid,active
+S0161,true,Synthetic Student 0161,Electronics,2,s0161@example.invalid,active
+S0162,true,Synthetic Student 0162,Mechanical,2,s0162@example.invalid,active
+S0163,true,Synthetic Student 0163,Electronics,2,s0163@example.invalid,active
+S0164,true,Synthetic Student 0164,Information Technology,1,s0164@example.invalid,active
+S0165,true,Synthetic Student 0165,Mechanical,1,s0165@example.invalid,active
+S0166,true,Synthetic Student 0166,Electronics,4,s0166@example.invalid,active
+S0167,true,Synthetic Student 0167,Information Technology,4,s0167@example.invalid,active
+S0168,true,Synthetic Student 0168,Civil,1,s0168@example.invalid,active
+S0169,true,Synthetic Student 0169,Mechanical,1,s0169@example.invalid,active
+S0170,true,Synthetic Student 0170,Electronics,3,s0170@example.invalid,active
+S0171,true,Synthetic Student 0171,Mechanical,1,s0171@example.invalid,active
+S0172,true,Synthetic Student 0172,Electronics,3,s0172@example.invalid,active
+S0173,true,Synthetic Student 0173,Computer Science,3,s0173@example.invalid,active
+S0174,true,Synthetic Student 0174,Computer Science,1,s0174@example.invalid,active
+S0175,true,Synthetic Student 0175,Computer Science,4,s0175@example.invalid,active
+S0176,true,Synthetic Student 0176,Information Technology,2,s0176@example.invalid,active
+S0177,true,Synthetic Student 0177,Computer Science,3,s0177@example.invalid,active
+S0178,true,Synthetic Student 0178,Electronics,1,s0178@example.invalid,active
+S0179,true,Synthetic Student 0179,Mechanical,4,s0179@example.invalid,active
+S0180,true,Synthetic Student 0180,Information Technology,2,s0180@example.invalid,active
+S0181,true,Synthetic Student 0181,Civil,1,s0181@example.invalid,active
+S0182,true,Synthetic Student 0182,Mechanical,2,s0182@example.invalid,active
+S0183,true,Synthetic Student 0183,Computer Science,3,s0183@example.invalid,active
+S0184,true,Synthetic Student 0184,Mechanical,2,s0184@example.invalid,active
+S0185,true,Synthetic Student 0185,Computer Science,3,s0185@example.invalid,active
+S0186,true,Synthetic Student 0186,Information Technology,2,s0186@example.invalid,active
+S0187,true,Synthetic Student 0187,Information Technology,2,s0187@example.invalid,active
+S0188,true,Synthetic Student 0188,Information Technology,1,s0188@example.invalid,active
+S0189,true,Synthetic Student 0189,Civil,4,s0189@example.invalid,active
+S0190,true,Synthetic Student 0190,Computer Science,2,s0190@example.invalid,active
+S0191,true,Synthetic Student 0191,Information Technology,3,s0191@example.invalid,active
+S0192,true,Synthetic Student 0192,Information Technology,4,s0192@example.invalid,active
+S0193,true,Synthetic Student 0193,Information Technology,2,s0193@example.invalid,active
+S0194,true,Synthetic Student 0194,Civil,4,s0194@example.invalid,active
+S0195,true,Synthetic Student 0195,Mechanical,4,s0195@example.invalid,active
+S0196,true,Synthetic Student 0196,Computer Science,3,s0196@example.invalid,active
+S0197,true,Synthetic Student 0197,Information Technology,4,s0197@example.invalid,active
+S0198,true,Synthetic Student 0198,Electronics,1,s0198@example.invalid,active
+S0199,true,Synthetic Student 0199,Information Technology,2,s0199@example.invalid,active
+S0200,true,Synthetic Student 0200,Mechanical,3,s0200@example.invalid,active
+S0201,true,Synthetic Student 0201,Information Technology,4,s0201@example.invalid,active
+S0202,true,Synthetic Student 0202,Mechanical,1,s0202@example.invalid,active
+S0203,true,Synthetic Student 0203,Civil,1,s0203@example.invalid,active
+S0204,true,Synthetic Student 0204,Civil,1,s0204@example.invalid,active
+S0205,true,Synthetic Student 0205,Mechanical,3,s0205@example.invalid,active
+S0206,true,Synthetic Student 0206,Electronics,2,s0206@example.invalid,active
+S0207,true,Synthetic Student 0207,Information Technology,1,s0207@example.invalid,active
+S0208,true,Synthetic Student 0208,Mechanical,1,s0208@example.invalid,active
+S0209,true,Synthetic Student 0209,Civil,4,s0209@example.invalid,active
+S0210,true,Synthetic Student 0210,Electronics,3,s0210@example.invalid,active
+S0211,true,Synthetic Student 0211,Information Technology,4,s0211@example.invalid,active
+S0212,true,Synthetic Student 0212,Electronics,2,s0212@example.invalid,active
+S0213,true,Synthetic Student 0213,Information Technology,2,s0213@example.invalid,active
+S0214,true,Synthetic Student 0214,Civil,1,s0214@example.invalid,active
+S0215,true,Synthetic Student 0215,Information Technology,2,s0215@example.invalid,active
+S0216,true,Synthetic Student 0216,Civil,3,s0216@example.invalid,active
+S0217,true,Synthetic Student 0217,Mechanical,4,s0217@example.invalid,active
+S0218,true,Synthetic Student 0218,Computer Science,3,s0218@example.invalid,active
+S0219,true,Synthetic Student 0219,Civil,3,s0219@example.invalid,active
+S0220,true,Synthetic Student 0220,Information Technology,4,s0220@example.invalid,active
+S0221,true,Synthetic Student 0221,Mechanical,4,s0221@example.invalid,active
+S0222,true,Synthetic Student 0222,Civil,4,s0222@example.invalid,active
+S0223,true,Synthetic Student 0223,Mechanical,3,s0223@example.invalid,active
+S0224,true,Synthetic Student 0224,Information Technology,1,s0224@example.invalid,active
+S0225,true,Synthetic Student 0225,Electronics,4,s0225@example.invalid,active
+S0226,true,Synthetic Student 0226,Civil,4,s0226@example.invalid,active
+S0227,true,Synthetic Student 0227,Computer Science,2,s0227@example.invalid,active
+S0228,true,Synthetic Student 0228,Electronics,3,s0228@example.invalid,active
+S0229,true,Synthetic Student 0229,Mechanical,2,s0229@example.invalid,active
+S0230,true,Synthetic Student 0230,Computer Science,4,s0230@example.invalid,active
+S0231,true,Synthetic Student 0231,Mechanical,1,s0231@example.invalid,active
+S0232,true,Synthetic Student 0232,Computer Science,1,s0232@example.invalid,active
+S0233,true,Synthetic Student 0233,Information Technology,2,s0233@example.invalid,active
+S0234,true,Synthetic Student 0234,Electronics,2,s0234@example.invalid,active
+S0235,true,Synthetic Student 0235,Electronics,2,s0235@example.invalid,active
+S0236,true,Synthetic Student 0236,Electronics,2,s0236@example.invalid,active
+S0237,true,Synthetic Student 0237,Electronics,1,s0237@example.invalid,active
+S0238,true,Synthetic Student 0238,Computer Science,4,s0238@example.invalid,active
+S0239,true,Synthetic Student 0239,Electronics,4,s0239@example.invalid,active
+S0240,true,Synthetic Student 0240,Electronics,2,s0240@example.invalid,active
+S0241,true,Synthetic Student 0241,Mechanical,4,s0241@example.invalid,active
+S0242,true,Synthetic Student 0242,Electronics,2,s0242@example.invalid,active
+S0243,true,Synthetic Student 0243,Information Technology,1,s0243@example.invalid,active
+S0244,true,Synthetic Student 0244,Information Technology,3,s0244@example.invalid,active
+S0245,true,Synthetic Student 0245,Information Technology,2,s0245@example.invalid,active
+S0246,true,Synthetic Student 0246,Information Technology,1,s0246@example.invalid,active
+S0247,true,Synthetic Student 0247,Electronics,2,s0247@example.invalid,active
+S0248,true,Synthetic Student 0248,Computer Science,4,s0248@example.invalid,active
+S0249,true,Synthetic Student 0249,Computer Science,2,s0249@example.invalid,active
+S0250,true,Synthetic Student 0250,Computer Science,2,s0250@example.invalid,active
+S0251,true,Synthetic Student 0251,Civil,2,s0251@example.invalid,active
+S0252,true,Synthetic Student 0252,Mechanical,4,s0252@example.invalid,active
+S0253,true,Synthetic Student 0253,Civil,4,s0253@example.invalid,active
+S0254,true,Synthetic Student 0254,Computer Science,1,s0254@example.invalid,active
+S0255,true,Synthetic Student 0255,Mechanical,1,s0255@example.invalid,active
+S0256,true,Synthetic Student 0256,Information Technology,2,s0256@example.invalid,active
+S0257,true,Synthetic Student 0257,Mechanical,3,s0257@example.invalid,active
+S0258,true,Synthetic Student 0258,Computer Science,2,s0258@example.invalid,active
+S0259,true,Synthetic Student 0259,Mechanical,3,s0259@example.invalid,active
+S0260,true,Synthetic Student 0260,Electronics,4,s0260@example.invalid,active
+S0261,true,Synthetic Student 0261,Civil,3,s0261@example.invalid,active
+S0262,true,Synthetic Student 0262,Information Technology,4,s0262@example.invalid,active
+S0263,true,Synthetic Student 0263,Information Technology,2,s0263@example.invalid,active
+S0264,true,Synthetic Student 0264,Information Technology,4,s0264@example.invalid,active
+S0265,true,Synthetic Student 0265,Information Technology,4,s0265@example.invalid,active
+S0266,true,Synthetic Student 0266,Information Technology,1,s0266@example.invalid,active
+S0267,true,Synthetic Student 0267,Civil,3,s0267@example.invalid,active
+S0268,true,Synthetic Student 0268,Computer Science,4,s0268@example.invalid,active
+S0269,true,Synthetic Student 0269,Mechanical,3,s0269@example.invalid,active
+S0270,true,Synthetic Student 0270,Computer Science,2,s0270@example.invalid,active
+S0271,true,Synthetic Student 0271,Computer Science,3,s0271@example.invalid,active
+S0272,true,Synthetic Student 0272,Computer Science,1,s0272@example.invalid,active
+S0273,true,Synthetic Student 0273,Electronics,1,s0273@example.invalid,active
+S0274,true,Synthetic Student 0274,Civil,3,s0274@example.invalid,active
+S0275,true,Synthetic Student 0275,Information Technology,4,s0275@example.invalid,active
+S0276,true,Synthetic Student 0276,Civil,4,s0276@example.invalid,active
+S0277,true,Synthetic Student 0277,Information Technology,3,s0277@example.invalid,active
+S0278,true,Synthetic Student 0278,Mechanical,3,s0278@example.invalid,active
+S0279,true,Synthetic Student 0279,Electronics,2,s0279@example.invalid,active
+S0280,true,Synthetic Student 0280,Mechanical,3,s0280@example.invalid,active
+S0281,true,Synthetic Student 0281,Information Technology,3,s0281@example.invalid,active
+S0282,true,Synthetic Student 0282,Mechanical,4,s0282@example.invalid,active
+S0283,true,Synthetic Student 0283,Computer Science,4,s0283@example.invalid,active
+S0284,true,Synthetic Student 0284,Civil,3,s0284@example.invalid,active
+S0285,true,Synthetic Student 0285,Mechanical,2,s0285@example.invalid,active
+S0286,true,Synthetic Student 0286,Mechanical,4,s0286@example.invalid,active
+S0287,true,Synthetic Student 0287,Civil,1,s0287@example.invalid,active
+S0288,true,Synthetic Student 0288,Civil,3,s0288@example.invalid,active
+S0289,true,Synthetic Student 0289,Civil,4,s0289@example.invalid,active
+S0290,true,Synthetic Student 0290,Civil,3,s0290@example.invalid,active
+S0291,true,Synthetic Student 0291,Information Technology,4,s0291@example.invalid,active
+S0292,true,Synthetic Student 0292,Electronics,4,s0292@example.invalid,active
+S0293,true,Synthetic Student 0293,Civil,4,s0293@example.invalid,active
+S0294,true,Synthetic Student 0294,Electronics,4,s0294@example.invalid,active
+S0295,true,Synthetic Student 0295,Information Technology,4,s0295@example.invalid,active
+S0296,true,Synthetic Student 0296,Electronics,4,s0296@example.invalid,active
+S0297,true,Synthetic Student 0297,Civil,3,s0297@example.invalid,active
+S0298,true,Synthetic Student 0298,Information Technology,1,s0298@example.invalid,active
+S0299,true,Synthetic Student 0299,Civil,1,s0299@example.invalid,active
+S0300,true,Synthetic Student 0300,Information Technology,4,s0300@example.invalid,active
+S0301,true,Synthetic Student 0301,Computer Science,2,s0301@example.invalid,active
+S0302,true,Synthetic Student 0302,Information Technology,1,s0302@example.invalid,active
+S0303,true,Synthetic Student 0303,Information Technology,4,s0303@example.invalid,active
+S0304,true,Synthetic Student 0304,Mechanical,2,s0304@example.invalid,active
+S0305,true,Synthetic Student 0305,Civil,2,s0305@example.invalid,active
+S0306,true,Synthetic Student 0306,Civil,3,s0306@example.invalid,active
+S0307,true,Synthetic Student 0307,Computer Science,4,s0307@example.invalid,active
+S0308,true,Synthetic Student 0308,Information Technology,1,s0308@example.invalid,active
+S0309,true,Synthetic Student 0309,Information Technology,4,s0309@example.invalid,active
+S0310,true,Synthetic Student 0310,Information Technology,3,s0310@example.invalid,active
+S0311,true,Synthetic Student 0311,Civil,4,s0311@example.invalid,active
+S0312,true,Synthetic Student 0312,Electronics,1,s0312@example.invalid,active
+S0313,true,Synthetic Student 0313,Information Technology,3,s0313@example.invalid,active
+S0314,true,Synthetic Student 0314,Electronics,4,s0314@example.invalid,active
+S0315,true,Synthetic Student 0315,Computer Science,2,s0315@example.invalid,active
+S0316,true,Synthetic Student 0316,Computer Science,1,s0316@example.invalid,active
+S0317,true,Synthetic Student 0317,Mechanical,1,s0317@example.invalid,active
+S0318,true,Synthetic Student 0318,Mechanical,3,s0318@example.invalid,active
+S0319,true,Synthetic Student 0319,Mechanical,4,s0319@example.invalid,active
+S0320,true,Synthetic Student 0320,Mechanical,4,s0320@example.invalid,active
+S0321,true,Synthetic Student 0321,Electronics,1,s0321@example.invalid,active
+S0322,true,Synthetic Student 0322,Computer Science,2,s0322@example.invalid,active
+S0323,true,Synthetic Student 0323,Mechanical,2,s0323@example.invalid,active
+S0324,true,Synthetic Student 0324,Electronics,1,s0324@example.invalid,active
+S0325,true,Synthetic Student 0325,Information Technology,2,s0325@example.invalid,active
+S0326,true,Synthetic Student 0326,Civil,1,s0326@example.invalid,active
+S0327,true,Synthetic Student 0327,Mechanical,4,s0327@example.invalid,active
+S0328,true,Synthetic Student 0328,Computer Science,4,s0328@example.invalid,active
+S0329,true,Synthetic Student 0329,Information Technology,3,s0329@example.invalid,active
+S0330,true,Synthetic Student 0330,Mechanical,4,s0330@example.invalid,active
+S0331,true,Synthetic Student 0331,Information Technology,4,s0331@example.invalid,active
+S0332,true,Synthetic Student 0332,Information Technology,2,s0332@example.invalid,active
+S0333,true,Synthetic Student 0333,Electronics,2,s0333@example.invalid,active
+S0334,true,Synthetic Student 0334,Mechanical,2,s0334@example.invalid,active
+S0335,true,Synthetic Student 0335,Mechanical,1,s0335@example.invalid,active
+S0336,true,Synthetic Student 0336,Mechanical,4,s0336@example.invalid,active
+S0337,true,Synthetic Student 0337,Civil,2,s0337@example.invalid,active
+S0338,true,Synthetic Student 0338,Information Technology,1,s0338@example.invalid,active
+S0339,true,Synthetic Student 0339,Information Technology,2,s0339@example.invalid,active
+S0340,true,Synthetic Student 0340,Civil,3,s0340@example.invalid,active
+S0341,true,Synthetic Student 0341,Computer Science,2,s0341@example.invalid,active
+S0342,true,Synthetic Student 0342,Computer Science,3,s0342@example.invalid,active
+S0343,true,Synthetic Student 0343,Computer Science,2,s0343@example.invalid,active
+S0344,true,Synthetic Student 0344,Civil,1,s0344@example.invalid,active
+S0345,true,Synthetic Student 0345,Information Technology,1,s0345@example.invalid,active
+S0346,true,Synthetic Student 0346,Information Technology,1,s0346@example.invalid,active
+S0347,true,Synthetic Student 0347,Mechanical,3,s0347@example.invalid,active
+S0348,true,Synthetic Student 0348,Electronics,4,s0348@example.invalid,active
+S0349,true,Synthetic Student 0349,Information Technology,4,s0349@example.invalid,active
+S0350,true,Synthetic Student 0350,Mechanical,1,s0350@example.invalid,active
+S0351,true,Synthetic Student 0351,Computer Science,1,s0351@example.invalid,active
+S0352,true,Synthetic Student 0352,Electronics,4,s0352@example.invalid,active
+S0353,true,Synthetic Student 0353,Computer Science,1,s0353@example.invalid,active
+S0354,true,Synthetic Student 0354,Mechanical,1,s0354@example.invalid,active
+S0355,true,Synthetic Student 0355,Mechanical,1,s0355@example.invalid,active
+S0356,true,Synthetic Student 0356,Computer Science,2,s0356@example.invalid,active
+S0357,true,Synthetic Student 0357,Mechanical,2,s0357@example.invalid,active
+S0358,true,Synthetic Student 0358,Mechanical,3,s0358@example.invalid,active
+S0359,true,Synthetic Student 0359,Civil,2,s0359@example.invalid,active
+S0360,true,Synthetic Student 0360,Mechanical,3,s0360@example.invalid,active
+S0361,true,Synthetic Student 0361,Computer Science,2,s0361@example.invalid,active
+S0362,true,Synthetic Student 0362,Civil,1,s0362@example.invalid,active
+S0363,true,Synthetic Student 0363,Computer Science,2,s0363@example.invalid,active
+S0364,true,Synthetic Student 0364,Computer Science,3,s0364@example.invalid,active
+S0365,true,Synthetic Student 0365,Mechanical,2,s0365@example.invalid,active
+S0366,true,Synthetic Student 0366,Electronics,2,s0366@example.invalid,active
+S0367,true,Synthetic Student 0367,Civil,2,s0367@example.invalid,active
+S0368,true,Synthetic Student 0368,Computer Science,3,s0368@example.invalid,active
+S0369,true,Synthetic Student 0369,Computer Science,3,s0369@example.invalid,active
+S0370,true,Synthetic Student 0370,Civil,2,s0370@example.invalid,active
+S0371,true,Synthetic Student 0371,Electronics,2,s0371@example.invalid,active
+S0372,true,Synthetic Student 0372,Information Technology,3,s0372@example.invalid,active
+S0373,true,Synthetic Student 0373,Electronics,4,s0373@example.invalid,active
+S0374,true,Synthetic Student 0374,Mechanical,1,s0374@example.invalid,active
+S0375,true,Synthetic Student 0375,Mechanical,3,s0375@example.invalid,active
+S0376,true,Synthetic Student 0376,Electronics,1,s0376@example.invalid,active
+S0377,true,Synthetic Student 0377,Information Technology,3,s0377@example.invalid,active
+S0378,true,Synthetic Student 0378,Civil,2,s0378@example.invalid,active
+S0379,true,Synthetic Student 0379,Computer Science,3,s0379@example.invalid,active
+S0380,true,Synthetic Student 0380,Electronics,2,s0380@example.invalid,active
+S0381,true,Synthetic Student 0381,Mechanical,2,s0381@example.invalid,active
+S0382,true,Synthetic Student 0382,Information Technology,4,s0382@example.invalid,active
+S0383,true,Synthetic Student 0383,Computer Science,3,s0383@example.invalid,active
+S0384,true,Synthetic Student 0384,Civil,4,s0384@example.invalid,active
+S0385,true,Synthetic Student 0385,Mechanical,3,s0385@example.invalid,active
+S0386,true,Synthetic Student 0386,Mechanical,4,s0386@example.invalid,active
+S0387,true,Synthetic Student 0387,Civil,3,s0387@example.invalid,active
+S0388,true,Synthetic Student 0388,Electronics,4,s0388@example.invalid,active
+S0389,true,Synthetic Student 0389,Information Technology,1,s0389@example.invalid,active
+S0390,true,Synthetic Student 0390,Information Technology,4,s0390@example.invalid,active
+S0391,true,Synthetic Student 0391,Information Technology,1,s0391@example.invalid,active
+S0392,true,Synthetic Student 0392,Electronics,1,s0392@example.invalid,active
+S0393,true,Synthetic Student 0393,Mechanical,2,s0393@example.invalid,active
+S0394,true,Synthetic Student 0394,Computer Science,1,s0394@example.invalid,active
+S0395,true,Synthetic Student 0395,Electronics,4,s0395@example.invalid,active
+S0396,true,Synthetic Student 0396,Civil,4,s0396@example.invalid,active
+S0397,true,Synthetic Student 0397,Mechanical,2,s0397@example.invalid,active
+S0398,true,Synthetic Student 0398,Electronics,1,s0398@example.invalid,active
+S0399,true,Synthetic Student 0399,Mechanical,3,s0399@example.invalid,active
+S0400,true,Synthetic Student 0400,Electronics,2,s0400@example.invalid,active
+S0401,true,Synthetic Student 0401,Computer Science,4,s0401@example.invalid,active
+S0402,true,Synthetic Student 0402,Electronics,3,s0402@example.invalid,active
+S0403,true,Synthetic Student 0403,Electronics,3,s0403@example.invalid,active
+S0404,true,Synthetic Student 0404,Computer Science,1,s0404@example.invalid,active
+S0405,true,Synthetic Student 0405,Mechanical,1,s0405@example.invalid,active
+S0406,true,Synthetic Student 0406,Computer Science,1,s0406@example.invalid,active
+S0407,true,Synthetic Student 0407,Civil,2,s0407@example.invalid,active
+S0408,true,Synthetic Student 0408,Computer Science,3,s0408@example.invalid,active
+S0409,true,Synthetic Student 0409,Computer Science,3,s0409@example.invalid,active
+S0410,true,Synthetic Student 0410,Civil,4,s0410@example.invalid,active
+S0411,true,Synthetic Student 0411,Computer Science,3,s0411@example.invalid,active
+S0412,true,Synthetic Student 0412,Civil,1,s0412@example.invalid,active
+S0413,true,Synthetic Student 0413,Information Technology,3,s0413@example.invalid,active
+S0414,true,Synthetic Student 0414,Mechanical,2,s0414@example.invalid,active
+S0415,true,Synthetic Student 0415,Computer Science,2,s0415@example.invalid,active
+S0416,true,Synthetic Student 0416,Civil,4,s0416@example.invalid,active
+S0417,true,Synthetic Student 0417,Computer Science,4,s0417@example.invalid,active
+S0418,true,Synthetic Student 0418,Electronics,3,s0418@example.invalid,active
+S0419,true,Synthetic Student 0419,Computer Science,3,s0419@example.invalid,active
+S0420,true,Synthetic Student 0420,Mechanical,4,s0420@example.invalid,active
+S0421,true,Synthetic Student 0421,Computer Science,2,s0421@example.invalid,active
+S0422,true,Synthetic Student 0422,Civil,3,s0422@example.invalid,active
+S0423,true,Synthetic Student 0423,Electronics,1,s0423@example.invalid,active
+S0424,true,Synthetic Student 0424,Mechanical,4,s0424@example.invalid,active
+S0425,true,Synthetic Student 0425,Mechanical,4,s0425@example.invalid,active
+S0426,true,Synthetic Student 0426,Civil,4,s0426@example.invalid,active
+S0427,true,Synthetic Student 0427,Electronics,4,s0427@example.invalid,active
+S0428,true,Synthetic Student 0428,Civil,4,s0428@example.invalid,active
+S0429,true,Synthetic Student 0429,Civil,1,s0429@example.invalid,active
+S0430,true,Synthetic Student 0430,Information Technology,1,s0430@example.invalid,active
+S0431,true,Synthetic Student 0431,Information Technology,3,s0431@example.invalid,active
+S0432,true,Synthetic Student 0432,Mechanical,1,s0432@example.invalid,active
+S0433,true,Synthetic Student 0433,Mechanical,3,s0433@example.invalid,active
+S0434,true,Synthetic Student 0434,Electronics,2,s0434@example.invalid,active
+S0435,true,Synthetic Student 0435,Mechanical,4,s0435@example.invalid,active
+S0436,true,Synthetic Student 0436,Mechanical,4,s0436@example.invalid,active
+S0437,true,Synthetic Student 0437,Information Technology,4,s0437@example.invalid,active
+S0438,true,Synthetic Student 0438,Computer Science,4,s0438@example.invalid,active
+S0439,true,Synthetic Student 0439,Computer Science,4,s0439@example.invalid,active
+S0440,true,Synthetic Student 0440,Computer Science,4,s0440@example.invalid,active
+S0441,true,Synthetic Student 0441,Computer Science,4,s0441@example.invalid,active
+S0442,true,Synthetic Student 0442,Information Technology,3,s0442@example.invalid,active
+S0443,true,Synthetic Student 0443,Computer Science,3,s0443@example.invalid,active
+S0444,true,Synthetic Student 0444,Civil,4,s0444@example.invalid,active
+S0445,true,Synthetic Student 0445,Computer Science,1,s0445@example.invalid,active
+S0446,true,Synthetic Student 0446,Civil,3,s0446@example.invalid,active
+S0447,true,Synthetic Student 0447,Electronics,1,s0447@example.invalid,active
+S0448,true,Synthetic Student 0448,Civil,2,s0448@example.invalid,active
+S0449,true,Synthetic Student 0449,Computer Science,4,s0449@example.invalid,active
+S0450,true,Synthetic Student 0450,Mechanical,3,s0450@example.invalid,active
+S0451,true,Synthetic Student 0451,Information Technology,4,s0451@example.invalid,active
+S0452,true,Synthetic Student 0452,Mechanical,1,s0452@example.invalid,active
+S0453,true,Synthetic Student 0453,Civil,4,s0453@example.invalid,active
+S0454,true,Synthetic Student 0454,Information Technology,4,s0454@example.invalid,active
+S0455,true,Synthetic Student 0455,Mechanical,2,s0455@example.invalid,active
+S0456,true,Synthetic Student 0456,Mechanical,1,s0456@example.invalid,active
+S0457,true,Synthetic Student 0457,Information Technology,2,s0457@example.invalid,active
+S0458,true,Synthetic Student 0458,Information Technology,4,s0458@example.invalid,active
+S0459,true,Synthetic Student 0459,Civil,2,s0459@example.invalid,active
+S0460,true,Synthetic Student 0460,Mechanical,4,s0460@example.invalid,active
+S0461,true,Synthetic Student 0461,Computer Science,1,s0461@example.invalid,active
+S0462,true,Synthetic Student 0462,Electronics,3,s0462@example.invalid,active
+S0463,true,Synthetic Student 0463,Electronics,2,s0463@example.invalid,active
+S0464,true,Synthetic Student 0464,Electronics,2,s0464@example.invalid,active
+S0465,true,Synthetic Student 0465,Computer Science,2,s0465@example.invalid,active
+S0466,true,Synthetic Student 0466,Computer Science,4,s0466@example.invalid,active
+S0467,true,Synthetic Student 0467,Electronics,2,s0467@example.invalid,active
+S0468,true,Synthetic Student 0468,Information Technology,2,s0468@example.invalid,active
+S0469,true,Synthetic Student 0469,Information Technology,4,s0469@example.invalid,active
+S0470,true,Synthetic Student 0470,Electronics,2,s0470@example.invalid,active
+S0471,true,Synthetic Student 0471,Mechanical,3,s0471@example.invalid,active
+S0472,true,Synthetic Student 0472,Electronics,4,s0472@example.invalid,active
+S0473,true,Synthetic Student 0473,Civil,3,s0473@example.invalid,active
+S0474,true,Synthetic Student 0474,Computer Science,2,s0474@example.invalid,active
+S0475,true,Synthetic Student 0475,Electronics,2,s0475@example.invalid,active
+S0476,true,Synthetic Student 0476,Computer Science,2,s0476@example.invalid,active
+S0477,true,Synthetic Student 0477,Civil,4,s0477@example.invalid,active
+S0478,true,Synthetic Student 0478,Civil,3,s0478@example.invalid,active
+S0479,true,Synthetic Student 0479,Mechanical,4,s0479@example.invalid,active
+S0480,true,Synthetic Student 0480,Computer Science,2,s0480@example.invalid,active
+S0481,true,Synthetic Student 0481,Information Technology,3,s0481@example.invalid,active
+S0482,true,Synthetic Student 0482,Computer Science,2,s0482@example.invalid,active
+S0483,true,Synthetic Student 0483,Electronics,1,s0483@example.invalid,active
+S0484,true,Synthetic Student 0484,Computer Science,1,s0484@example.invalid,active
+S0485,true,Synthetic Student 0485,Civil,4,s0485@example.invalid,active
+S0486,true,Synthetic Student 0486,Computer Science,4,s0486@example.invalid,active
+S0487,true,Synthetic Student 0487,Mechanical,2,s0487@example.invalid,active
+S0488,true,Synthetic Student 0488,Civil,4,s0488@example.invalid,active
+S0489,true,Synthetic Student 0489,Electronics,4,s0489@example.invalid,active
+S0490,true,Synthetic Student 0490,Information Technology,3,s0490@example.invalid,active
+S0491,true,Synthetic Student 0491,Civil,1,s0491@example.invalid,active
+S0492,true,Synthetic Student 0492,Information Technology,1,s0492@example.invalid,active
+S0493,true,Synthetic Student 0493,Electronics,1,s0493@example.invalid,active
+S0494,true,Synthetic Student 0494,Information Technology,1,s0494@example.invalid,active
+S0495,true,Synthetic Student 0495,Information Technology,3,s0495@example.invalid,active
+S0496,true,Synthetic Student 0496,Computer Science,1,s0496@example.invalid,active
+S0497,true,Synthetic Student 0497,Civil,4,s0497@example.invalid,active
+S0498,true,Synthetic Student 0498,Electronics,3,s0498@example.invalid,active
+S0499,true,Synthetic Student 0499,Electronics,1,s0499@example.invalid,active
+S0500,true,Synthetic Student 0500,Computer Science,3,s0500@example.invalid,active
+S0501,true,Synthetic Student 0501,Computer Science,2,s0501@example.invalid,active
+S0502,true,Synthetic Student 0502,Mechanical,1,s0502@example.invalid,active
+S0503,true,Synthetic Student 0503,Computer Science,3,s0503@example.invalid,active
+S0504,true,Synthetic Student 0504,Mechanical,4,s0504@example.invalid,active
+S0505,true,Synthetic Student 0505,Information Technology,1,s0505@example.invalid,active
+S0506,true,Synthetic Student 0506,Mechanical,1,s0506@example.invalid,active
+S0507,true,Synthetic Student 0507,Mechanical,4,s0507@example.invalid,active
+S0508,true,Synthetic Student 0508,Computer Science,3,s0508@example.invalid,active
+S0509,true,Synthetic Student 0509,Computer Science,4,s0509@example.invalid,active
+S0510,true,Synthetic Student 0510,Mechanical,3,s0510@example.invalid,active
+S0511,true,Synthetic Student 0511,Computer Science,4,s0511@example.invalid,active
+S0512,true,Synthetic Student 0512,Information Technology,3,s0512@example.invalid,active
+S0513,true,Synthetic Student 0513,Mechanical,3,s0513@example.invalid,active
+S0514,true,Synthetic Student 0514,Electronics,1,s0514@example.invalid,active
+S0515,true,Synthetic Student 0515,Electronics,4,s0515@example.invalid,active
+S0516,true,Synthetic Student 0516,Mechanical,2,s0516@example.invalid,active
+S0517,true,Synthetic Student 0517,Computer Science,3,s0517@example.invalid,active
+S0518,true,Synthetic Student 0518,Information Technology,3,s0518@example.invalid,active
+S0519,true,Synthetic Student 0519,Civil,3,s0519@example.invalid,active
+S0520,true,Synthetic Student 0520,Mechanical,4,s0520@example.invalid,active
+S0521,true,Synthetic Student 0521,Electronics,3,s0521@example.invalid,active
+S0522,true,Synthetic Student 0522,Mechanical,2,s0522@example.invalid,active
+S0523,true,Synthetic Student 0523,Electronics,2,s0523@example.invalid,active
+S0524,true,Synthetic Student 0524,Information Technology,1,s0524@example.invalid,active
+S0525,true,Synthetic Student 0525,Information Technology,3,s0525@example.invalid,active
+S0526,true,Synthetic Student 0526,Civil,3,s0526@example.invalid,active
+S0527,true,Synthetic Student 0527,Computer Science,3,s0527@example.invalid,active
+S0528,true,Synthetic Student 0528,Electronics,2,s0528@example.invalid,active
+S0529,true,Synthetic Student 0529,Electronics,1,s0529@example.invalid,active
+S0530,true,Synthetic Student 0530,Information Technology,2,s0530@example.invalid,active
+S0531,true,Synthetic Student 0531,Mechanical,4,s0531@example.invalid,active
+S0532,true,Synthetic Student 0532,Electronics,1,s0532@example.invalid,active
+S0533,true,Synthetic Student 0533,Electronics,1,s0533@example.invalid,active
+S0534,true,Synthetic Student 0534,Civil,2,s0534@example.invalid,active
+S0535,true,Synthetic Student 0535,Civil,2,s0535@example.invalid,active
+S0536,true,Synthetic Student 0536,Civil,2,s0536@example.invalid,active
+S0537,true,Synthetic Student 0537,Computer Science,1,s0537@example.invalid,active
+S0538,true,Synthetic Student 0538,Electronics,4,s0538@example.invalid,active
+S0539,true,Synthetic Student 0539,Electronics,3,s0539@example.invalid,active
+S0540,true,Synthetic Student 0540,Computer Science,3,s0540@example.invalid,active
+S0541,true,Synthetic Student 0541,Civil,4,s0541@example.invalid,active
+S0542,true,Synthetic Student 0542,Mechanical,2,s0542@example.invalid,active
+S0543,true,Synthetic Student 0543,Civil,4,s0543@example.invalid,active
+S0544,true,Synthetic Student 0544,Information Technology,4,s0544@example.invalid,active
+S0545,true,Synthetic Student 0545,Electronics,3,s0545@example.invalid,active
+S0546,true,Synthetic Student 0546,Information Technology,1,s0546@example.invalid,active
+S0547,true,Synthetic Student 0547,Electronics,3,s0547@example.invalid,active
+S0548,true,Synthetic Student 0548,Electronics,3,s0548@example.invalid,active
+S0549,true,Synthetic Student 0549,Civil,3,s0549@example.invalid,active
+S0550,true,Synthetic Student 0550,Electronics,4,s0550@example.invalid,active
+S0551,true,Synthetic Student 0551,Electronics,4,s0551@example.invalid,active
+S0552,true,Synthetic Student 0552,Information Technology,2,s0552@example.invalid,active
+S0553,true,Synthetic Student 0553,Electronics,2,s0553@example.invalid,active
+S0554,true,Synthetic Student 0554,Mechanical,2,s0554@example.invalid,active
+S0555,true,Synthetic Student 0555,Computer Science,2,s0555@example.invalid,active
+S0556,true,Synthetic Student 0556,Mechanical,4,s0556@example.invalid,active
+S0557,true,Synthetic Student 0557,Mechanical,2,s0557@example.invalid,active
+S0558,true,Synthetic Student 0558,Civil,4,s0558@example.invalid,active
+S0559,true,Synthetic Student 0559,Mechanical,4,s0559@example.invalid,active
+S0560,true,Synthetic Student 0560,Computer Science,3,s0560@example.invalid,active
+S0561,true,Synthetic Student 0561,Electronics,4,s0561@example.invalid,active
+S0562,true,Synthetic Student 0562,Information Technology,4,s0562@example.invalid,active
+S0563,true,Synthetic Student 0563,Mechanical,2,s0563@example.invalid,active
+S0564,true,Synthetic Student 0564,Mechanical,2,s0564@example.invalid,active
+S0565,true,Synthetic Student 0565,Civil,1,s0565@example.invalid,active
+S0566,true,Synthetic Student 0566,Civil,3,s0566@example.invalid,active
+S0567,true,Synthetic Student 0567,Information Technology,2,s0567@example.invalid,active
+S0568,true,Synthetic Student 0568,Mechanical,4,s0568@example.invalid,active
+S0569,true,Synthetic Student 0569,Electronics,1,s0569@example.invalid,active
+S0570,true,Synthetic Student 0570,Information Technology,2,s0570@example.invalid,active
+S0571,true,Synthetic Student 0571,Civil,3,s0571@example.invalid,active
+S0572,true,Synthetic Student 0572,Civil,1,s0572@example.invalid,active
+S0573,true,Synthetic Student 0573,Electronics,1,s0573@example.invalid,active
+S0574,true,Synthetic Student 0574,Electronics,2,s0574@example.invalid,active
+S0575,true,Synthetic Student 0575,Mechanical,1,s0575@example.invalid,active
+S0576,true,Synthetic Student 0576,Civil,2,s0576@example.invalid,active
+S0577,true,Synthetic Student 0577,Electronics,4,s0577@example.invalid,active
+S0578,true,Synthetic Student 0578,Electronics,3,s0578@example.invalid,active
+S0579,true,Synthetic Student 0579,Information Technology,1,s0579@example.invalid,active
+S0580,true,Synthetic Student 0580,Information Technology,1,s0580@example.invalid,active
+S0581,true,Synthetic Student 0581,Electronics,4,s0581@example.invalid,active
+S0582,true,Synthetic Student 0582,Electronics,4,s0582@example.invalid,active
+S0583,true,Synthetic Student 0583,Civil,4,s0583@example.invalid,active
+S0584,true,Synthetic Student 0584,Electronics,3,s0584@example.invalid,active
+S0585,true,Synthetic Student 0585,Computer Science,1,s0585@example.invalid,active
+S0586,true,Synthetic Student 0586,Electronics,3,s0586@example.invalid,active
+S0587,true,Synthetic Student 0587,Mechanical,3,s0587@example.invalid,active
+S0588,true,Synthetic Student 0588,Information Technology,2,s0588@example.invalid,active
+S0589,true,Synthetic Student 0589,Mechanical,2,s0589@example.invalid,active
+S0590,true,Synthetic Student 0590,Mechanical,2,s0590@example.invalid,active
+S0591,true,Synthetic Student 0591,Information Technology,1,s0591@example.invalid,active
+S0592,true,Synthetic Student 0592,Computer Science,1,s0592@example.invalid,active
+S0593,true,Synthetic Student 0593,Civil,3,s0593@example.invalid,active
+S0594,true,Synthetic Student 0594,Information Technology,4,s0594@example.invalid,active
+S0595,true,Synthetic Student 0595,Electronics,2,s0595@example.invalid,active
+S0596,true,Synthetic Student 0596,Electronics,4,s0596@example.invalid,active
+S0597,true,Synthetic Student 0597,Mechanical,1,s0597@example.invalid,active
+S0598,true,Synthetic Student 0598,Electronics,1,s0598@example.invalid,active
+S0599,true,Synthetic Student 0599,Mechanical,4,s0599@example.invalid,active
+S0600,true,Synthetic Student 0600,Electronics,4,s0600@example.invalid,active

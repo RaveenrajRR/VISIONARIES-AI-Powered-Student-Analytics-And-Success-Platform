@@ -1,0 +1,1 @@
+export type Role='admin'|'faculty'|'student';export interface Student {studentId:string;displayName:string;department:string;year:number;status:string;synthetic:boolean;sources?:Record<string,Record<string,unknown>>}

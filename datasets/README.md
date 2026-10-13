@@ -1,0 +1,2 @@
+# Synthetic dataset
+Six hundred synthetic student rows plus six linked source files are included in `raw/`. Primary CSVs have unique student IDs per source; missing values are blank and not imputed. Reproducible seed: 20261013. Validate: `python -m pytest ai-service/tests` and use `python backend/scripts/import-dataset.py` after configuring MongoDB. For duplicate-import testing, repeat the import; MongoDB upserts use `student_id` as key. Do not use synthetic data to make real student decisions.
