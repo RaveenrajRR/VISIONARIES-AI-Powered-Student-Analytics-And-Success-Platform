@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Login from '../features/auth/Login';
 import Dashboard from '../features/dashboard/Dashboard';
+import StudentHome from '../features/dashboard/StudentHome';
+import RootAdmin from '../features/dashboard/RootAdmin';
 import Students from '../features/students/Students';
 import StudentDetail from '../features/students/StudentDetail';
 import InterventionWorkspace from '../features/interventions/Workspace';
@@ -67,17 +69,19 @@ function RoleRoute({ user, roles, children }) {
 
 function Workspace() {
     return <Guard>{user => <Shell user={user}><Routes>
-      <Route path="/dashboard" element={<Dashboard />}/>
-      <Route path="/students" element={<Students />}/>
-      <Route path="/students/:id" element={<StudentDetail />}/>
-      <Route path="/integration" element={<RoleRoute user={user} roles={['admin']}><Integration /></RoleRoute>}/>
-      <Route path="/interventions" element={<RoleRoute user={user} roles={['admin', 'faculty']}><InterventionWorkspace /></RoleRoute>}/>
+      <Route path="/dashboard" element={user.role === "student" ? <StudentHome /> : user.role === "root-admin" ? <Navigate to="/root-control" replace/> : <Dashboard />}/>
+      <Route path="/root-control" element={<RoleRoute user={user} roles={['root-admin']}><RootAdmin /></RoleRoute>}/>
+      <Route path="/my-profile" element={<RoleRoute user={user} roles={['student']}><StudentHome /></RoleRoute>}/>
+      <Route path="/students" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><Students /></RoleRoute>}/>
+      <Route path="/students/:id" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty', 'student']}><StudentDetail /></RoleRoute>}/>
+      <Route path="/integration" element={<RoleRoute user={user} roles={['root-admin', 'admin']}><Integration /></RoleRoute>}/>
+      <Route path="/interventions" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><InterventionWorkspace /></RoleRoute>}/>
       <Route path="/methodology" element={<Methodology />}/>
-      <Route path="/risk" element={<RoleRoute user={user} roles={['admin', 'faculty']}><RiskAnalysisPage /></RoleRoute>}/>
-      <Route path="/placement" element={<RoleRoute user={user} roles={['admin', 'faculty']}><PlacementReadinessPage /></RoleRoute>}/>
-      <Route path="/segments" element={<RoleRoute user={user} roles={['admin', 'faculty']}><SegmentsPage /></RoleRoute>}/>
-      <Route path="/reports" element={<RoleRoute user={user} roles={['admin', 'faculty']}><Reports /></RoleRoute>}/>
-      <Route path="/settings" element={<RoleRoute user={user} roles={['admin']}><SettingsPage /></RoleRoute>}/>
+      <Route path="/risk" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><RiskAnalysisPage /></RoleRoute>}/>
+      <Route path="/placement" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><PlacementReadinessPage /></RoleRoute>}/>
+      <Route path="/segments" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><SegmentsPage /></RoleRoute>}/>
+      <Route path="/reports" element={<RoleRoute user={user} roles={['root-admin', 'admin', 'faculty']}><Reports /></RoleRoute>}/>
+      <Route path="/settings" element={<RoleRoute user={user} roles={['root-admin', 'admin']}><SettingsPage /></RoleRoute>}/>
       <Route path="*" element={<Navigate to="/dashboard" replace/>}/>
     </Routes></Shell>}</Guard>;
 }

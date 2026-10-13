@@ -2207,3 +2207,25 @@ td b {
     color: #111;
   }
 }
+
+/* Student-only dashboard additions */
+.profile-summary { display:flex; align-items:center; gap:14px; margin:8px 0 18px; }
+.profile-summary .avatar { width:48px; height:48px; font-size:15px; }
+.profile-summary h2 { margin:0 0 5px; font:600 18px 'Space Grotesk',sans-serif; }
+.profile-summary p { margin:4px 0; color:var(--muted); font-size:11px; }
+.student-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:18px 0; }
+.student-facts > div,.course-card { display:grid; gap:7px; padding:13px; border:1px solid var(--border); border-radius:10px; background:var(--surface-raised); }
+.student-facts small,.course-card small { color:var(--muted); font-size:10px; }
+.student-facts b { font-size:13px; }
+.course-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.course-card { align-content:start; min-height:150px; }
+.course-card b { font-size:12px; line-height:1.5; }
+.course-icon { display:grid; place-items:center; width:34px; height:34px; color:var(--accent); background:var(--accent-soft); border-radius:9px; }
+.course-card .tiny-track { height:5px; border-radius:9px; background:var(--border); overflow:hidden; }
+.course-card .tiny-track i { display:block; height:100%; background:var(--accent); border-radius:9px; }
+@media (max-width: 900px) { .course-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 560px) { .student-facts { grid-template-columns:1fr; } .course-grid { grid-template-columns:1fr; } }
+
+/* Root-admin control center */
+.page-stack{display:flex;flex-direction:column;gap:22px}.content-grid{display:grid;gap:18px}.content-grid.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}.panel-heading h2{display:flex;align-items:center;gap:9px;margin:0 0 6px;font-size:17px}.panel-heading p{margin:0;color:var(--muted,#8c96aa);font-size:13px}.stack-form{display:grid;gap:13px}.stack-form label{display:grid;gap:7px;font-size:13px;font-weight:600}.stack-form input,.stack-form select{width:100%;border:1px solid var(--line,#30384b);background:var(--surface-2,#101827);color:var(--text,#f4f6fb);border-radius:10px;padding:11px 12px;font:inherit}.stack-form small{font-weight:400;color:var(--muted,#8c96aa)}.detail-list{display:grid;gap:0;margin:6px 0 18px}.detail-list>div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line,#30384b);font-size:13px}.detail-list>div span{color:var(--muted,#8c96aa)}.detail-list>div b{text-align:right}.warning-note{display:flex;align-items:flex-start;gap:9px;padding:12px;border-radius:10px;background:rgba(234,179,8,.09);color:var(--text,#f4f6fb);font-size:12px;line-height:1.5;margin:12px 0 16px}.table-wrap{overflow:auto;width:100%}.data-table{width:100%;border-collapse:collapse;font-size:13px}.data-table th,.data-table td{text-align:left;padding:12px 13px;border-bottom:1px solid var(--line,#30384b);vertical-align:middle;white-space:nowrap}.data-table th{color:var(--muted,#8c96aa);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.data-table td small{display:block;color:var(--muted,#8c96aa);margin-top:4px}.data-table code{font-size:11px;white-space:normal;overflow-wrap:anywhere}.role-pill,.count-pill,.status-label{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:700;background:rgba(99,102,241,.12);color:var(--text,#f4f6fb)}.status-label.active{background:rgba(34,197,94,.12);color:#4ade80}.status-label.inactive{background:rgba(239,68,68,.12);color:#f87171}.table-action{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line,#30384b);border-radius:8px;padding:7px 9px;background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:12px}.table-action:disabled{opacity:.4;cursor:not-allowed}.success-box{border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);color:#4ade80;border-radius:10px;padding:12px 14px;font-size:13px}.metric-card small{display:block;color:var(--muted,#8c96aa);margin-top:5px;font-size:11px}
+@media(max-width:900px){.content-grid.two-col{grid-template-columns:1fr}.data-table{min-width:650px}}

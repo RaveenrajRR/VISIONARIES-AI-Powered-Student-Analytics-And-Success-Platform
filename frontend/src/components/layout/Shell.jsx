@@ -1,21 +1,23 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { BrainCircuit, Users, ChartNoAxesCombined, Database, ShieldAlert, ClipboardCheck, Settings, LogOut, GraduationCap, FileBarChart, Layers, Moon, Sun } from 'lucide-react';
+import { BrainCircuit, Users, ChartNoAxesCombined, Database, ShieldAlert, ClipboardCheck, Settings, LogOut, GraduationCap, FileBarChart, Layers, Moon, Sun, ShieldCheck } from 'lucide-react';
 import { useThemePreference } from '../../hooks/useThemePreference';
 import { api, clearSession } from '../../services/api';
 
-const allRoles = ['admin', 'faculty', 'student'];
+const allRoles = ['root-admin', 'admin', 'faculty', 'student'];
 const nav = [
+    ['Root control center', '/root-control', ShieldCheck, ['root-admin']],
     ['Overview', '/dashboard', ChartNoAxesCombined, allRoles],
-    ['Learning & career', '/dashboard?view=features', BrainCircuit, allRoles],
-    ['Students', '/students', Users, allRoles],
-    ['Risk analysis', '/risk', ShieldAlert, ['admin', 'faculty']],
-    ['Placement readiness', '/placement', GraduationCap, ['admin', 'faculty']],
-    ['Segments', '/segments', Layers, ['admin', 'faculty']],
-    ['Interventions', '/interventions', ClipboardCheck, ['admin', 'faculty']],
-    ['Data integration', '/integration', Database, ['admin']],
-    ['Score methodology', '/methodology', BrainCircuit, allRoles],
-    ['Reports', '/reports', FileBarChart, ['admin', 'faculty']],
-    ['Settings & audit', '/settings', Settings, ['admin']],
+    ['Learning & career', '/dashboard?view=features', BrainCircuit, ['root-admin', 'admin', 'faculty']],
+    ['Students', '/students', Users, ['root-admin', 'admin', 'faculty']],
+    ['My profile', '/my-profile', GraduationCap, ['student']],
+    ['Risk analysis', '/risk', ShieldAlert, ['root-admin', 'admin', 'faculty']],
+    ['Placement readiness', '/placement', GraduationCap, ['root-admin', 'admin', 'faculty']],
+    ['Segments', '/segments', Layers, ['root-admin', 'admin', 'faculty']],
+    ['Interventions', '/interventions', ClipboardCheck, ['root-admin', 'admin', 'faculty']],
+    ['Data integration', '/integration', Database, ['root-admin', 'admin']],
+    ['Score methodology', '/methodology', BrainCircuit, ['root-admin', 'admin', 'faculty']],
+    ['Reports', '/reports', FileBarChart, ['root-admin', 'admin', 'faculty']],
+    ['Settings & audit', '/settings', Settings, ['root-admin', 'admin']],
 ];
 
 export function Shell({ children, user }) {
