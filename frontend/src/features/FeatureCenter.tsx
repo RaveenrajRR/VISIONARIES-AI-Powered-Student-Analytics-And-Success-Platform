@@ -80,14 +80,235 @@ function Mentors() {
                 return <div className="detail-grid"><Panel title={user.role === 'faculty' ? 'Mentor availability' : 'Mentor matches'} subtitle="Expertise, availability and active capacity"><PageState loading={matches.isLoading} error={matches.error} empty={!matches.data?.items?.length}>{matches.data?.items?.map((match: Item) => <div className="intervention-row" key={match.profileId}><div><b>{match.expertise?.join(', ') || 'Mentor'}</b><small>{match.explanation?.join(' · ')} · {match.compatibility?.remainingCapacity} places available</small></div><button className="secondary-btn" onClick={() => request(match.profileId)}>Request</button></div>)}</PageState>{user.role === 'faculty' && <form className="stack-form" onSubmit={save}><label>Expertise<input value={expertise} onChange={e => setExpertise(e.target.value)} placeholder="e.g. internships, Python" /></label><label>Availability<input value={availability} onChange={e => setAvailability(e.target.value)} /></label><label>Maximum active mentees<input type="number" min="1" max="100" value={capacity} onChange={e => setCapacity(e.target.value)} /></label><button className="primary-btn">Publish mentor profile</button></form>}{message && <p className="muted">{message}</p>}</Panel><Panel title="Mentorship requests" subtitle="Requests tied to your account and department"><PageState loading={requests.isLoading} error={requests.error} empty={!requests.data?.items?.length}><List>{requests.data?.items?.map((item: Item) => <div className="intervention-row" key={item._id}><div><b>{item.requesterStudentId}</b><small>{item.message} · {item.status}</small></div>{user.role === 'faculty' && item.status === 'pending' && <div className="form-actions"><button className="secondary-btn" onClick={() => decide(item._id!, 'accept')}>Accept</button><button className="secondary-btn" onClick={() => decide(item._id!, 'decline')}>Decline</button></div>}</div>)}</List></PageState></Panel></div>;
 }
 
+
 function Certificates() {
-                const qc = useQueryClient(), user = currentUser(), [file, setFile] = useState<File | null>(null), [title, setTitle] = useState(''), [message, setMessage] = useState('');
-                const certificates = useQuery({ queryKey: ['feature-certificates'], queryFn: () => api<any>('/features/certificates') });
-                async function upload(e: React.FormEvent) { e.preventDefault(); if (!file) return; try { const contentBase64 = bytesToBase64(await file.arrayBuffer()); await api('/features/certificates', { method: 'POST', body: JSON.stringify({ title, fileName: file.name, contentType: file.type, contentBase64 }) }); setTitle(''); setFile(null); setMessage('Certificate submitted for review.'); await qc.invalidateQueries({ queryKey: ['feature-certificates'] }); } catch (error) { setMessage(errorText(error)); } }
-                async function review(id: string, status: 'approved' | 'rejected') { try { await api(`/features/certificates/${id}/review`, { method: 'PATCH', body: JSON.stringify({ status }) }); await qc.invalidateQueries({ queryKey: ['feature-certificates'] }); } catch (error) { setMessage(errorText(error)); } }
-                async function download(id: string, name: string) { try { const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:4000/api'}/features/certificates/${id}/file`, { headers: { authorization: `Bearer ${token()}` } }); if (!response.ok) throw new Error('Download was not authorized.'); const url = URL.createObjectURL(await response.blob()); const link = document.createElement('a'); link.href = url; link.download = name; link.click(); URL.revokeObjectURL(url); } catch (error) { setMessage(errorText(error)); } }
-                return <div className="detail-grid"><Panel title="Upload certificate" subtitle="Private PDF, PNG or JPEG · maximum 3 MiB"><form className="stack-form" onSubmit={upload}><label>Certificate title<input required value={title} onChange={e => setTitle(e.target.value)} maxLength={200} /></label><label>File<input required type="file" accept="application/pdf,image/png,image/jpeg" onChange={e => setFile(e.target.files?.[0] || null)} /></label><button className="primary-btn" disabled={!file}>Submit certificate</button></form><p className="muted">Uploaded documents are private. Human review is required; a file or any text extraction does not prove authenticity.</p>{message && <p className="muted">{message}</p>}</Panel><Panel title="Certificate review queue" subtitle="Private records from the authorized scope"><PageState loading={certificates.isLoading} error={certificates.error} empty={!certificates.data?.items?.length}><List>{certificates.data?.items?.map((item: Item) => <div className="intervention-row" key={item._id}><div><b>{item.title}</b><small>{item.originalFileName} · {item.reviewStatus}</small>{item.reviewNote && <small>{item.reviewNote}</small>}</div><div className="form-actions"><button className="secondary-btn" onClick={() => download(item._id, item.originalFileName)}>Download</button>{user.role !== 'student' && item.reviewStatus === 'pending' && <><button className="secondary-btn" onClick={() => review(item._id, 'approved')}>Approve</button><button className="secondary-btn" onClick={() => review(item._id, 'rejected')}>Reject</button></>}</div></div>)}</List></PageState></Panel></div>;
+  const qc = useQueryClient();
+  const user = currentUser();
+
+  const [file, setFile] = useState<File | null>(null);
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
+
+  const certificates = useQuery({
+    queryKey: ['feature-certificates'],
+    queryFn: () => api<any>('/features/certificates'),
+  });
+
+  async function upload(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!file) {
+      setMessage('Please select a certificate file.');
+      return;
+    }
+
+    try {
+      const contentBase64 = bytesToBase64(
+        await file.arrayBuffer()
+      );
+
+      await api('/features/certificates', {
+        method: 'POST',
+        body: JSON.stringify({
+          title,
+          fileName: file.name,
+          contentType: file.type,
+          contentBase64,
+        }),
+      });
+
+      setTitle('');
+      setFile(null);
+      setMessage('Certificate submitted for review.');
+
+      await qc.invalidateQueries({
+        queryKey: ['feature-certificates'],
+      });
+    } catch (error) {
+      setMessage(errorText(error));
+    }
+  }
+
+  async function review(
+    id: string,
+    status: 'approved' | 'rejected'
+  ) {
+    try {
+      await api(`/features/certificates/${id}/review`, {
+        method: 'PATCH',
+        body: JSON.stringify({ status }),
+      });
+
+      await qc.invalidateQueries({
+        queryKey: ['feature-certificates'],
+      });
+
+      setMessage(`Certificate ${status}.`);
+    } catch (error) {
+      setMessage(errorText(error));
+    }
+  }
+
+  async function download(id: string, name: string) {
+    try {
+      const baseUrl =
+        import.meta.env.VITE_API_URL ||
+        'http://localhost:4000/api';
+
+      const response = await fetch(
+        `${baseUrl}/features/certificates/${id}/file`,
+        {
+          headers: {
+            authorization: `Bearer ${token()}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Download was not authorized.');
+      }
+
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.download = name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      setMessage(errorText(error));
+    }
+  }
+
+  return (
+    <div className="detail-grid">
+      <Panel
+        title="Upload certificate"
+        subtitle="Private PDF, PNG or JPEG · maximum 3 MiB"
+      >
+        <form className="stack-form" onSubmit={upload}>
+          <label>
+            Certificate title
+            <input
+              required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              maxLength={200}
+            />
+          </label>
+
+          <label>
+            File
+            <input
+              required
+              type="file"
+              accept="application/pdf,image/png,image/jpeg"
+              onChange={(e) =>
+                setFile(e.target.files?.[0] ?? null)
+              }
+            />
+          </label>
+
+          <button className="primary-btn" disabled={!file}>
+            Submit certificate
+          </button>
+        </form>
+
+        <p className="muted">
+          Uploaded documents are private. Human review is required;
+          a file or any text extraction does not prove authenticity.
+        </p>
+
+        {message && <p className="muted">{message}</p>}
+      </Panel>
+
+      <Panel
+        title="Certificate review queue"
+        subtitle="Private records from the authorized scope"
+      >
+        <PageState
+          loading={certificates.isLoading}
+          error={certificates.error}
+          empty={!certificates.data?.items?.length}
+        >
+          <List>
+            {certificates.data?.items?.map((item: Item) => {
+              const id = item._id;
+
+              return (
+                <div
+                  className="intervention-row"
+                  key={id ?? item.id ?? item.title}
+                >
+                  <div>
+                    <b>{item.title}</b>
+                    <small>
+                      {item.originalFileName} · {item.reviewStatus}
+                    </small>
+
+                    {item.reviewNote && (
+                      <small>{item.reviewNote}</small>
+                    )}
+                  </div>
+
+                  <div className="form-actions">
+                    {id && (
+                      <>
+                        <button
+                          type="button"
+                          className="secondary-btn"
+                          onClick={() =>
+                            download(
+                              id,
+                              item.originalFileName ||
+                                'certificate'
+                            )
+                          }
+                        >
+                          Download
+                        </button>
+
+                        {user.role !== 'student' &&
+                          item.reviewStatus === 'pending' && (
+                            <>
+                              <button
+                                type="button"
+                                className="secondary-btn"
+                                onClick={() =>
+                                  review(id, 'approved')
+                                }
+                              >
+                                Approve
+                              </button>
+
+                              <button
+                                type="button"
+                                className="secondary-btn"
+                                onClick={() =>
+                                  review(id, 'rejected')
+                                }
+                              >
+                                Reject
+                              </button>
+                            </>
+                          )}
+                      </>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </List>
+        </PageState>
+      </Panel>
+    </div>
+  );
 }
+
 
 function Scholarships() {
                 const qc = useQueryClient(), user = currentUser(), [message, setMessage] = useState('');
