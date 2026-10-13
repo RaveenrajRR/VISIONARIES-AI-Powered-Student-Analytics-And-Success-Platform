@@ -8,7 +8,9 @@ services:
     build: ./ai-service
     ports: ["8000:8000"]
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     env_file: .env
     ports: ["4000:4000"]
     depends_on: [mongo, ai-service]

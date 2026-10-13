@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/server.js",
+    "dev": "node --watch src/server.js",
+    "build": "node --check src/server.js",
+    "start": "node src/server.js",
     "test": "vitest run",
-    "seed": "tsx scripts/seed.ts",
-    "import:dataset": "tsx scripts/import-dataset.ts"
+    "seed": "node scripts/seed.js",
+    "seed:demo": "node scripts/seed-demo.js",
+    "import:dataset": "node scripts/import-dataset.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,15 +25,7 @@
     "csv-parse": "^5.5.6"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/jsonwebtoken": "^9.0.7",
-    "@types/morgan": "^1.9.9",
-    "@types/node": "^22.10.5",
     "supertest": "^7.0.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
 }

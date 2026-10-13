@@ -15,7 +15,7 @@ Open PowerShell in the extracted `EduAI-Nexus` directory.
 ```powershell
 Copy-Item .env.example .env
 # Edit .env and set MONGODB_URI and a long random JWT_SECRET.
-# Set ADMIN_EMAIL and ADMIN_PASSWORD for your own local demo admin.
+# DEMO_MODE is false by default; keep demo users on an isolated synthetic-data database.
 
 # Terminal 1: AI service
 cd ai-service
@@ -40,7 +40,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`. Sign in using the credentials you set in `.env`. Never use these local demo credentials in production. Seed creates/updates only the environment-configured admin; no hardcoded production password exists.
+Open `http://localhost:5173`. Sign in using the credentials you set in `.env`. For a separate local synthetic-data demo database, set `DEMO_MODE=true`, run `npm run import:dataset`, then `npm run seed:demo` from `backend`. The public demo accounts are `student@eduanexus.demo` / `StudentDemo@123` and `admin@eduanexus.demo` / `AdminDemo@123`; they are read-only and must never be used with real student data. The regular `npm run seed` command provisions only the environment-configured institutional admin.
 
 ### Dataset import order
 The CLI script reads `datasets/raw/*.csv` and loads the master students then source records. It is idempotent by stable student ID; repeat runs update existing records and record per-source import freshness. It rejects duplicate IDs, invalid numeric ranges, and source rows without a matching master student. CSVs have 600 synthetic students and 600 linked rows per source. Browser import flow supports preview and commit for admin users. For safe reset, connect to the intended local demo database and delete only the demo database/collections you own; **do not run a blanket delete against a shared/production database**.
@@ -56,7 +56,7 @@ The React app calls the authenticated Express API; Express loads authorized Mong
 cd ai-service
 py -m pytest
 
-# Backend tests and compile
+# Backend tests and syntax check
 cd ..\backend
 npm install
 npm test
@@ -75,7 +75,10 @@ Read `docs/architecture.md`, `docs/scoring-methodology.md`, `docs/api-documentat
 The AI health card in the dashboard checks the live FastAPI service. Keep MongoDB, FastAPI, the Express API, and Vite running in separate PowerShell terminals. Start the Python service from the `ai-service` folder; its configuration loader reads the repository-root `.env`.
 
 ## Role accounts
-Admin is created from `ADMIN_EMAIL` and `ADMIN_PASSWORD` by `npm run seed`. Faculty/student accounts can be created by an institution-controlled provisioning workflow; the current package includes role/department/student ownership enforcement in the API, but not a public self-registration UI. Create faculty/student records through a secured administrative provisioning script or extend the admin account-management UI before real deployment.
+Admin is created from `ADMIN_EMAIL` and `ADMIN_PASSWORD` by `npm run seed`. Faculty/student accounts can be created by an institution-controlled provisioning workflow; the API enforces role/department/student ownership. The public demo accounts are provisioned only by `npm run seed:demo` when `DEMO_MODE=true`; the API authenticates them and denies all state-changing requests.
+
+## Public deployment
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for the Render Blueprint, HTTPS API/environment setup, Atlas demo-database requirements, dataset import, and post-deploy verification steps. Do not deploy the public demo accounts against institutional data. No quiz/question-bank feature exists in this repository.
 
 ## Security / limitations
 - Set a long random `JWT_SECRET`, restrict CORS, use HTTPS in hosted environments and use least-privilege MongoDB credentials.
@@ -84,4 +87,4 @@ Admin is created from `ADMIN_EMAIL` and `ADMIN_PASSWORD` by `npm run seed`. Facu
 - Trend aggregation is currently an explicit empty response rather than fabricated trend data. The dashboard displays actual counts and current-page department distribution; it does not yet implement every requested longitudinal analytics/report workflow.
 - The browser CSV preview uses a simple parser for standard unquoted CSV cells; CLI import uses `csv-parse` and is the recommended path for bundled data. Production uploads should use a streaming parser and stronger per-field validation.
 - Express API endpoint contracts are documented in `docs/api-documentation.md`; FastAPI publishes OpenAPI automatically. Do not deploy with synthetic records mixed into real student records without clear tenant/source separation.
-- No real service deployment was performed as part of packaging. See `deployment/README.md` for Vercel, Render and Atlas guidance and free-tier caveats.
+- No real service deployment has been performed from this workspace; hosting credentials are not configured.

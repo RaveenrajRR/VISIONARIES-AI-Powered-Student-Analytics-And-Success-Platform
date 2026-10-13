@@ -1,0 +1,49 @@
+services:
+  - type: pserv
+    name: eduai-demo-ai
+    runtime: docker
+    region: oregon
+    plan: starter
+    rootDir: ai-service
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+
+  - type: web
+    name: eduai-demo-api
+    runtime: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DEMO_MODE
+        value: "true"
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: AI_SERVICE_URL
+        sync: false
+      - key: AI_SERVICE_TIMEOUT_MS
+        value: 10000
+
+  - type: web
+    name: eduai-demo-web
+    runtime: static
+    region: oregon
+    buildCommand: npm ci && npm run build
+    rootDir: frontend
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false
